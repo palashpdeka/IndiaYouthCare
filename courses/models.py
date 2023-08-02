@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+class course_details(models.Model):
+     course_name=models.CharField(max_length=100)
+     course_poster=models.ImageField(upload_to="courses/",max_length=300,null=True,default=None)
+     course_details=models.TextField(blank=True)
