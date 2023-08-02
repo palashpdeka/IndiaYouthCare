@@ -1,0 +1,53 @@
+{% include 'header.html' %}
+
+<div class="formbold-main-wrapper">
+    <!-- Author: FormBold Team -->
+    <!-- Learn More: https://formbold.com -->
+    <div class="formbold-form-wrapper">
+      
+      <!--<img src="your-image-url-here.jpg">-->
+  
+      <form action={% url 'save_details' %} method="POST">
+        {% csrf_token %}
+        <div class="formbold-form-title">
+          <h2 class="">Register here</h2>
+          <h>{{course}}</h3>
+        </div>
+  
+        <div class="formbold-input-flex">
+          <div>
+            <label for="name" class="formbold-form-label"> Name </label>
+            <input type="text" name="name" id="name" class="formbold-form-input"/>
+          </div>
+        </div>
+  
+        <div class="formbold-input-flex">
+          <div>
+            <label for="email" class="formbold-form-label"> Email </label>
+            <input  type="email" name="email" id="email" class="formbold-form-input"/>
+          </div>
+
+          <div>
+            <label for="phone" class="formbold-form-label"> Phone number (What's App preferably) </label>
+            <input type="text" name="phone" id="phone" class="formbold-form-input"/>
+          </div>
+          
+          <div>
+            <label for="comment" class="formbold-form-label"> We welcome anything you'd like to share </label>
+            <input type="text" name="comment" id="comment" class="formbold-form-input" />
+          </div>
+
+          <div>
+            <input type="hidden" name="course" value="{{course}}"/>
+          </div>
+
+        </div>
+        </div>
+        
+  
+        <button type="submit" class="formbold-btn">register Now</button>
+      </form>
+
+    </div>
+  </div>
+  <style>
