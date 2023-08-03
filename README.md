@@ -1,11 +1,13 @@
 # IndiaYouthCare
+```How to run the above project in your system```
+
 1. Install "python" and "mysql" in your system.
 
 2. To work in a virtual environment-
 > python -m venv virtual_env_name
 
 3. To work on virtual env (for windows)-
-> virtual_env_name/Source/activate
+> virtual_env_name/Scripts/activate
 
 4. To install django-
 > pip install django
