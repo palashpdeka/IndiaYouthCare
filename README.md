@@ -3,7 +3,7 @@
 
 1. Install "python" and "mysql" in your system.
 
-2. To work in a virtual environment-
+2. To create a virtual environment-
 > python -m venv virtual_env_name
 
 3. To work on virtual env (for windows)-
