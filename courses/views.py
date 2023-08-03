@@ -1,10 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from courses.models import course_details, registrant
-import datetime
+from courses.models import course_detail, registrant
+from django.db.models.signals import pre_delete
+from django.dispatch import receiver
+from django.urls import path
+import datetime, os
+
 
 def courses_page(request):
-    all_courses=course_details.objects.all()
+    all_courses=course_detail.objects.all()
     data={'courses':all_courses}
     return render(request,"courses.html",data)
 
@@ -27,3 +31,7 @@ def save_details(request):
     all_courses=course_details.objects.all()
     data={'courses':all_courses}
     return render(request,"courses.html",data)
+
+@receiver(pre_delete, sender=course_detail)
+def delete_course_image(sender, instance, **kwargs):
+    os.remove(kwargs['origin'].course_poster.path)

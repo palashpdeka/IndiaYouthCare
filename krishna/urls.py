@@ -29,6 +29,7 @@ urlpatterns = [
     path('',include('character.urls')),
     path('',include('about_us.urls')),
     path('',include('career.urls')),
+    path('',include('blog.urls')),
 ]
 
 
