@@ -23,7 +23,7 @@
 > python manage.py migrate
 
 8. To create superuser to access the admin panel-
-> python manage.py create superuser
+> python manage.py createsuperuser
 
 9. To run the server-
 > python manage.py runserver
