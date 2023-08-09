@@ -23,18 +23,21 @@
 			</h3>
 		</div>
 	</div>
+    
+	<a href='/write_blog' style="height:30px;width:200px"> Write your own blog</a>
+
 	<div class="row">
 		{% for b in blogs%}
 		
         <div class="col-md-4">
-		{{b.name}}
-		<img src="{{b.image.url}}" width="100" height="100" >
-		{{b.comment}}
-		{{b.date}}
-		<a href="{{b.link}}" target="_blank">Click here to contact {{b.name}}</a>
+		{{b.name}} <br>
+		<!---<img src="{{b.image.url}}" width="100" height="100" >-->
+		{{b.comment}} <br>
+		{{b.date}} <br>
+		<a href="{{b.link}}" target="_blank">Click here to contact {{b.name}}</a> <br>
 	    </div>
-
         {% endfor %}
+		
 	</div>
 	<div class="row">
 		<div class="col-md-12">

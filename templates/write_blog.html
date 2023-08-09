@@ -1,0 +1,46 @@
+{% include 'header.html' %}
+
+<div class="formbold-main-wrapper">
+    <!-- Author: FormBold Team -->
+    <!-- Learn More: https://formbold.com -->
+    <div class="formbold-form-wrapper">
+      
+      <!--<img src="your-image-url-here.jpg">-->
+  
+      <form action={% url 'save_blog' %} method="POST">
+        {% csrf_token %}
+        <div class="formbold-form-title">
+          <h2 class="">Write your blogs here</h2>
+          <h>{{course}}</h3>
+        </div>
+  
+          <div>
+            <label for="name" class="formbold-form-label">Name</label>
+            <input type="text" name="name" id="comment" class="formbold-form-input" />
+          </div>
+
+          <div>
+            <label for="email" class="formbold-form-label">Email ID</label>
+            <input type="email" name="email" id="comment" class="formbold-form-input" />
+          </div>
+          
+          <div>
+            <label for="link" class="formbold-form-label">Link of your social media</label>
+            <input type="url" name="link" id="comment" class="formbold-form-input" />
+          </div>
+
+          <div>
+            <label for="comment" class="formbold-form-label">Share your viewpoint here</label>
+            <input type="text" name="comment" id="comment" class="formbold-form-input" />
+          </div>
+
+        </div>
+        </div>
+        
+  
+        <button type="submit" class="formbold-btn">Submit Blog</button>
+      </form>
+
+    </div>
+  </div>
+  <style>
