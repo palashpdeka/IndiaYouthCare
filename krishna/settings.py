@@ -82,9 +82,9 @@ WSGI_APPLICATION = 'krishna.wsgi.application'
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.mysql',
-		'NAME': '',
+		'NAME': 'my_db',
 		'USER': 'root',
-		'PASSWORD': 'root',
+		'PASSWORD': 'password1',
 		'HOST':'localhost',
 		'PORT':'3306',
 	}

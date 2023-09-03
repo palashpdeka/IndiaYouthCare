@@ -1,27 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>HomePage</title>
-	<link rel="stylesheet" href="/static/homepage/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="../static/homepage/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+		integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>India Youth Care</title>
 </head>
+
 <body>
-	<header>here will go header </header>
-	<div class="Main">
-		<div class="left">
-			<div class="header">
-                <h1>India <br> Youth Care </h1>
-				<p>Welcome to IndiaYouthCare, a platform devoted to empowering and elevating <br> India's young minds. We offer the youth support based on research and <br> science so that they can succeed in all facets of life</p>
-				<div class="button">
-					<button>Get Started</button>
-					<button> know more</button>
+	{% include 'header.html' %}
+
+	<!-- Hero Section-->
+	<section class="hero-section-container">
+		<div class="hero-section-box">
+			<div class="hero-section-contents">
+				<p class="hero-title">india <br> youth <span>care</span></p>
+				<p class="hero-subtext">Welcome to IndiaYouthCare, a platform devoted to empowering and elevating
+					India's young minds.
+				</p>
+				<button class="hero-cta-button">discover more
+					<span>
+						<i class="fa-solid fa-right-to-bracket" style="color: #ffffff;"></i>
+					</span>
+				</button>
+			</div>
+
+			<div class="hero-image-wrapper">
+				<img class="hero-image" src="../static//homepage/img/hero-image.png">
+			</div>
+		</div>
+	</section>
+
+	<!-- Events Section-->
+	<section class="home-events-section-container">
+		<p class="section-header">
+			Our <span>Events</span>
+		</p>
+		<div class="home-events-cards-container">
+			{% include 'homeEventCard.html' %}
+			{% include 'homeEventCard.html' %}
+			{% include 'homeEventCard.html' %}
+		</div>
+		<button class="section-cta-btn">Explore Events</button>
+	</section>
+
+	<!-- Offer Section-->
+	<section class="home-offer-section-container">
+		<p class="section-header">
+			What We <span>Offer</span>
+		</p>
+		<div class="home-offer-cards-container">
+			<!-- Offer Card 1-->
+			<div class="home-offer-card">
+				<img class="home-offer-card-image" src="../static/homepage/img/offer-card-image.png">
+				<div class="home-offer-card-contents">
+					<p class="home-offer-card-title">bhagwad geeta</p>
+					<p class="home-offer-card-description">
+						The Best Knowledge of Bhagwat Geeta
+					</p>
+				</div>
+			</div>
+
+			<!-- Offer Card 2-->
+			<div class="home-offer-card">
+				<img class="home-offer-card-image" src="../static/homepage/img/offer-card-image.png">
+				<div class="home-offer-card-contents">
+					<p class="home-offer-card-title">bhagwad geeta</p>
+					<p class="home-offer-card-description">
+						The Best Knowledge of Bhagwat Geeta
+					</p>
+				</div>
+			</div>
+
+			<!-- Offer Card 3-->
+			<div class="home-offer-card">
+				<img class="home-offer-card-image" src="../static/homepage/img/offer-card-image.png">
+				<div class="home-offer-card-contents">
+					<p class="home-offer-card-title">bhagwad geeta</p>
+					<p class="home-offer-card-description">
+						The Best Knowledge of Bhagwat Geeta
+					</p>
+				</div>
+			</div>
+
+			<!-- Offer Card 4-->
+			<div class="home-offer-card">
+				<img class="home-offer-card-image" src="../static/homepage/img/offer-card-image.png">
+				<div class="home-offer-card-contents">
+					<p class="home-offer-card-title">bhagwad geeta</p>
+					<p class="home-offer-card-description">
+						The Best Knowledge of Bhagwat Geeta
+					</p>
 				</div>
 			</div>
 		</div>
-		<div class="right">
-			<img src="../static/homepage/img/Group Hero SVG.jpg"/>
-		</div>
-	</div>
+		<button class="section-cta-btn">Know More</button>
+	</section>
+
+	{% include 'footer.html' %}
 </body>
+
 </html>

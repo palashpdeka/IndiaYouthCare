@@ -1,27 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>IndiaYouthCare</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" href="/static/header/SimpleBlog.css" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/header/header.css">
+  <title>Header</title>
 </head>
+
 <body>
-<div class="wrap">
-  <div class="header">
-    <h1 class="logo">India<span class="gray">YouthCare</span></h1>
-    <h2 class="slogan">Put your site slogan here...</h2>
+  <div class="overlay"></div>
+  <!--  Parent Container-->
+  <div class="navbar-container">
+    <div class="navbar-box">
+      <a class="nav-logo-wrapper" href="/">
+        <img class="logo" src="../static/header/nav-logo.svg">
+      </a>
+
+      <!-- Hamburger Menu-->
+      <div class="hamburger-container">
+        <button class="ham-button">
+          <i class="fa-solid fa-bars-staggered" style="color: #151515; font-size: 18px;"></i>
+        </button>
+        <!-- Ham Menu Wrapper-->
+        <div class="ham-menu-wrapper">
+          <button class="close-button">
+            <i class="fa-solid fa-xmark" style="color: #151515; font-size: 18px;"></i>
+          </button>
+          <div class="ham-menu-links-wrapper">
+            <a class="ham-menu-link" href="/character">Character Development</a>
+            <a class="ham-menu-link" href="/character">Mental Health</a>
+            <a class="ham-menu-link" href="/character">Courses</a>
+            <a class="ham-menu-link" href="/character">Events</a>
+            <a class="ham-menu-link" href="/character">About Us</a>
+          </div>
+          <div class="ham-menu-social-links-wrapper">
+            <img class="instagram-logo" src="../static/footer/instagram-logo.svg">
+            <img class="instagram-logo" src="../static/footer/facebook-logo.svg">
+          </div>
+        </div>
+      </div>
+
+      <!-- Navbar Links for Medium Screen and Desktop Devices-->
+      <div class="navbar-links-container">
+        <a class="navbar-link" href="/character">Character Development</a>
+        <a class="navbar-link" href="/character">Mental Health</a>
+        <a class="navbar-link" href="/character">Courses</a>
+        <a class="navbar-link" href="/character">Events</a>
+        <a class="navbar-link" href="/character">About Us</a>
+      </div>
+    </div>
+    <!-- Site Logo Wrapper-->
+
   </div>
-</div>
-  <div class="menu">
-    <ul>
-      <li id="current"><a href="/"><span>Home</span></a></li>
-      <li><a href="/career"><span>Career Guidance</span></a></li>
-      <li><a href="/character"><span>Character and Personality Development</span></a></li>
-      <li><a href="/mental_health"><span>Mental Healh and Physical Fitness</span></a></li>
-      <li><a href="/courses"><span>Courses and Programs</span></a></li>
-      <li><a href="/blogs"><span>Blogs</span></a></li>
-      <li id="current"><a href="/about_us"><span>About Us</span></a></li>
-    </ul>
-  </div>
+
+
+  <script>
+    const hamButton = document.querySelector('.ham-button');
+    const hamMenu = document.querySelector('.ham-menu-wrapper');
+    const body = document.querySelector('body');
+    const overlay = document.querySelector('.overlay');
+    const closeButton = document.querySelector('.close-button');
+
+    hamButton.addEventListener("click", () => {
+      hamMenu.style.transform = "translateX(0)";
+      body.style.overflowY = "hidden";
+      overlay.style.display = "block";
+      body.style.pointerEvents = "none";
+      hamMenu.style.pointerEvents = "auto";
+    })
+
+    closeButton.addEventListener("click", () => {
+      hamMenu.style.transform = "translateX(100%)";
+      body.style.overflowY = "scroll";
+      overlay.style.display = "none";
+      body.style.pointerEvents = "auto";
+      hamMenu.style.pointerEvents = "none";
+    })
+  </script>
 </body>
+
 </html>
