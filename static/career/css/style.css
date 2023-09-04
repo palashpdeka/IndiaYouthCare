@@ -1,1 +1,123 @@
-# Empty CSS file for your own CSS
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bodyBg: #fffffe;
+    --sectionBg: #faf9f6;
+    --white: #fff;
+    --primaryBlack: #151515;
+    --secondaryBlack: #707070;
+    --primaryBlue: #07004d;
+    --secondaryBlue: #256eff;
+    --primaryButtonBg: #3ddc97;
+    --poppins: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--bodyBg);
+    overflow-x: hidden;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--primaryBlack);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+.career-container {
+    padding: 80px 16px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        padding: 80px 30px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        padding: 120px 0 80px 0;
+        max-width: 924px;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 1440px) {
+        max-width: 1280px;
+    }
+}
+
+.header {
+    font-size: 24px;
+    font-family: var(--poppins);
+    color: var(--primaryBlue);
+    font-weight: 600;
+    text-align: center;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 28px;
+        text-align: left;
+    }
+
+    @media screen and (min-width: 1440px) {
+        font-size: 36px;
+    }
+}
+
+.header span {
+    color: var(--secondaryBlue);
+}
+
+.career-contents {
+    margin-top: 24px;
+
+    @media screen and (min-width: 1024px) {
+        margin-top: 36px;
+    }
+}
+
+.career-para {
+    font-size: 14px;
+    font-family: var(--poppins);
+    color: var(--primaryBlack);
+    line-height: 24px;
+    font-weight: 400;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 16px;
+        line-height: 30px;
+    }
+}
+
+.para-sub {
+    margin-top: 24px;
+}
+
+.para-head span, .para-sub span {
+    color: var(--secondaryBlue);
+    font-weight: 500;
+}
+
+.career-sub-header {
+    margin-top: 48px;
+    font-size: 18px;
+    font-family: var(--poppins);
+    color: var(--primaryBlue);
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.para-bullet-points {
+    margin-top: 13px;
+}

@@ -4,55 +4,26 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../static/courses/css/style.css">
 
     <title>courses and programs</title>
-
-    <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
-
-    <link href="/static/courses/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/courses/css/style.css" rel="stylesheet">
 
   </head>
   <body>
 	{% include "header.html" %}
-    <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<h3>
-				Courses and Programs
-			</h3>
+    
+	<section class="courses-container">
+		<div class="header">Courses and <span>Programs</span></div>
+
+		<div class="courses-cards-container">
+			{% include 'homeEventCard.html' %}
+			{% include 'homeEventCard.html' %}
+			{% include 'homeEventCard.html' %}
 		</div>
-	</div>
-	<div class="row">
-		{% for c in courses%}
-		
-        <div class="col-md-4">
-			{{c.course_name}}
-			<p>
-            <img src="{{c.course_poster.url}}" width="200" height="300" >
-			</p>
-		<p>
-			{{c.course_details}}
-		</p>
-		
-		<form action={% url 'regn_form' %} method="POST">
-			{% csrf_token %}
-			<button type="submit" value="{{c.course_name}}" name="course_name" style="height:30px;width:200px">Register</button>
-		</form>
+	</section>
 
-	    </div>
+	{% include 'footer.html' %}
 
-        {% endfor %}
-	</div>
-	<div class="row">
-		<div class="col-md-12">
-		</div>
-	</div>
-</div>
-
-    <script src="/static/courses/js/jquery.min.js"></script>
-    <script src="/static/courses/js/bootstrap.min.js"></script>
     <script src="/static/courses/js/scripts.js"></script>
   </body>
 </html>

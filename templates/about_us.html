@@ -1,64 +1,45 @@
-{% include "header.html" %}
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>about_us</title>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
+	<title>About Us</title>
+	<link href="../static//about_us/css/style.css" rel="stylesheet">
 
-    <link href="/static/about_us/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/about_us/css/style.css" rel="stylesheet">
+</head>
 
-  </head>
-  <body>
+<body>
+	{% include 'header.html' %}
 
-    <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<h3>
-				About us
-			</h3>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-4">
-			<h2>
-				Heading
-			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+	<section class="about-us-container">
+		<div class="header">About <span>Us</span></div>
+
+		<div class="about-us-contents">
+			<p class="about-us-para para-1">
+				Welcome to <strong>India Youth <span>Care</span></strong>, a platform devoted to empowering and elevating India's young minds. We are
+				firm believers in the value of free advice and offer our young people support that is based on research
+				and science so they can succeed in all facets of life. Our emphasis on small group interactions ensures
+				personalized attention and promotes deep bonds among our consumers. Whether you need help with your
+				studies, career advice, or just need someone to talk to, our community is here to help. We want to help
+				you clear your doubts and provide a supportive environment where you may develop and thrive. Join us on
+				this enlightening voyage, and let's travel life's roads together. Together, we can overcome challenges
+				and open the door to a more promising and bright future.
 			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
+
+			<p class="about-us-sub-header">
+				What defines us, and what drives our purpose?
 			</p>
-		</div>
-		<div class="col-md-4">
-			<h2>
-				Heading
-			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
+
+			<p class="about-us-para para-2">
+				We are a group of NIT alumni hailing from different NITs across India. As a group of NIT graduates, our mission is to empower Indian youth via knowledge of character and personality development, physical and mental fitness, and career counseling. Our goal is to offer the support and tools necessary for success in every area of life. Whether your goals are to improve your well-being, develop a strong character, or discover your real calling in life, our devoted team is prepared to travel with you on this life-changing trip. Come join our community, and let's work together to create a better future for India's young minds.
 			</p>
 		</div>
-		
-	</div>
-	<div class="row">
-		<div class="col-md-12">
-		</div>
-	</div>
-</div>
+	</section>
 
-    <script src="/static/about_us/js/jquery.min.js"></script>
-    <script src="/static/about_us/js/bootstrap.min.js"></script>
-    <script src="/static/about_us/js/scripts.js"></script>
-  </body>
+	{% include 'footer.html' %}
+</body>
+
 </html>

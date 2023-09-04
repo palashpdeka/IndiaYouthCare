@@ -52,6 +52,7 @@
 }
 
 .hamburger-container {
+	display: block;
 	@media screen and (min-width: 1024px) {
 		display: none;
 	}
@@ -100,7 +101,6 @@
 }
 
 .ham-menu-social-links-wrapper {
-	padding-top: 20px;
 	border-top: 1px solid rgba(153, 153, 153, 0.25);
 	position: absolute;
 	bottom: 0;
@@ -151,4 +151,10 @@
 
 .navbar-link:hover::after {
 	width: 100%;
+}
+
+.instagram-logo, .facebook-logo {
+    width: 20px;
+    height: auto;
+    cursor: pointer;
 }
